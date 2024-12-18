@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-ServiceBusEventListener.BgServcie-c2ad187f-2a6d-4923-8fee-aa310ee02ce2</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Messaging.ServiceBus" Version="7.15.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="7.0.9" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceBusEventListenerDemo.ApplicationServices\ServiceBusEventListenerDemo.ApplicationServices.csproj" />
+    <ProjectReference Include="..\ServiceBusEventListenerDemo.Infrastructure\ServiceBusEventListenerDemo.Infrastructure.csproj" />
+    <ProjectReference Include="..\ServiceBusEventListenerDemo.Model\ServiceBusEventListenerDemo.Model.csproj" />
+  </ItemGroup>
+</Project>
